@@ -1,6 +1,8 @@
 # MorainWebsite
 这是我想建立的一个网站，名字叫MorainWebsite。现已上线于(www.morainz.com)  
-基于流量1M小水管的腾讯云。
+通过Ubuntu+Nginx+Uwsgi部署。  
+基于流量1M小水管的腾讯云。  
+
 ## 为什么建立
 源于对python的兴趣，Django框架的好奇。  
 任何项目来源于需求，做一个个人网站的需求很简单，Just For Myself。  
@@ -82,8 +84,8 @@
 #### 章节更新
 >通过celery实行每10分钟定时爬取，爬取结果后通过获取signal，向用户进行邮件提醒。
 
-![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/%E7%AB%A0%E8%8A%82%E6%9B%B4%E6%96%B0.jpg)
-![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/%E7%9F%AD%E4%BF%A1%E6%8F%90%E9%86%92.jpg)
+![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/%E7%AB%A0%E8%8A%82%E6%9B%B4%E6%96%B0.png)
+![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/%E7%9F%AD%E4%BF%A1%E6%8F%90%E9%86%92.png)
 
 
 
