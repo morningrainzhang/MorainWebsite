@@ -53,37 +53,37 @@
 
 ## 界面
 ### index
-![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/index.png)
-![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/index_blog.png)
-![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/index_gallery.png)
-![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/index_library.png)
+![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/index.jpg)
+![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/index_blog.jpg)
+![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/index_gallery.jpg)
+![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/index_library.jpg)
 ### blog
-![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/blog1.png)
-![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/blog2.png)
-![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/blog3.png)
-![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/blog4.png)
+![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/blog1.jpg)
+![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/blog2.jpg)
+![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/blog3.jpg)
+![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/blog4.jpg)
 ### gallery
-![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/gallery1.png)
-![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/gallery2.png)
-![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/gallery3.png)
+![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/gallery1.jpg)
+![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/gallery2.jpg)
+![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/gallery3.jpg)
 ### novel
-![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/novel1.png)
-![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/novel2.png)
-![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/novel3.png)
+![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/novel1.jpg)
+![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/novel2.jpg)
+![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/novel3.jpg)
 #### SIGNIN/OUT
-![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/novel4.png)
-![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/novel5.png)
+![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/novel4.jpg)
+![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/novel5.jpg)
 ### function
 #### xadmin
 > 使用xadmin进行后台管理，并实现富文本编辑，其中支持markdown书写。
 
-![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/xadmin%E5%90%8E%E5%8F%B0.png)
-![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91.png)
+![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/xadmin%E5%90%8E%E5%8F%B0.jpg)
+![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91.jpg)
 #### 章节更新
 >通过celery实行每10分钟定时爬取，爬取结果后通过获取signal，向用户进行邮件提醒。
 
-![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/%E7%AB%A0%E8%8A%82%E6%9B%B4%E6%96%B0.png)
-![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/%E7%9F%AD%E4%BF%A1%E6%8F%90%E9%86%92.png)
+![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/%E7%AB%A0%E8%8A%82%E6%9B%B4%E6%96%B0.jpg)
+![](http://morain.oss-cn-hangzhou.aliyuncs.com/MorainWebsite/%E7%9F%AD%E4%BF%A1%E6%8F%90%E9%86%92.jpg)
 
 
 
