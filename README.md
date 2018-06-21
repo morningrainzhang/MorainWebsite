@@ -1,5 +1,5 @@
 # MorainWebsite
-这是我想建立的一个网站，名字叫MorainWebsite。现已上线于[Morainz](www.morainz.com),基于流量1M小水管的腾讯云。
+这是我想建立的一个网站，名字叫MorainWebsite。现已上线于(www.morainz.com),基于流量1M小水管的腾讯云。
 ## 为什么建立
 源于对python的兴趣，Django框架的好奇。  
 任何项目来源于需求，做一个个人网站的需求很简单，Just For Myself。  
@@ -38,7 +38,7 @@
 通过项目进行编程学习是亘古不变的道理。通过项目去实践各种python包，django的第三方库，是行之有效的学习方式。项目知识点总结：
 
 
-* `djang02.0`
+* `django2.0`
 * `django.mail`
 * `djangp.auth`
 * `rest_framework`
