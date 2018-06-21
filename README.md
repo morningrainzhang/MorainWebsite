@@ -1,5 +1,6 @@
 # MorainWebsite
-这是我想建立的一个网站，名字叫MorainWebsite。现已上线于(www.morainz.com),基于流量1M小水管的腾讯云。
+这是我想建立的一个网站，名字叫MorainWebsite。现已上线于(www.morainz.com)  
+基于流量1M小水管的腾讯云。
 ## 为什么建立
 源于对python的兴趣，Django框架的好奇。  
 任何项目来源于需求，做一个个人网站的需求很简单，Just For Myself。  
