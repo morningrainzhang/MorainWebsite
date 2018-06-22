@@ -1,0 +1,45 @@
+{% extends './base.html' %}
+{% load staticfiles %}
+{% load tags %}
+
+{% block title %}
+    Update
+{% endblock %}
+
+{% block nav %}
+    <ul class="links">
+        {% get_record_read_now request.user as record_read_now %}
+        <ul class="links">
+            <li><a href={% url 'novels' %}>Novel List</a></li>
+            {% if record_read_now %}
+                <li><a href="{% url 'sections' record_read_now.novel.id %}">Novel Home</a></li>
+                <li><a href="{% url 'detail' record_read_now.section.id %}">Reading</a></li>
+            {% else %}
+                <li><a>Novel Home</a></li>
+                <li><a>Reading</a></li>
+            {% endif %}
+            <li class="active"><a href="{% url 'update' %}">Novel Update</a></li>
+        </ul>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    {% regroup section_unread by novel.title as section_novel_group %}
+    <section class="post">
+        <header class="major">
+            <h1>Novel Update</h1>
+        </header>
+        <div class="box" id="section-feature">
+            {% for novel in section_novel_group %}
+                <h3>{{ novel.grouper }}</h3>
+                <div class="row">
+                    {% for section in novel.list %}
+                        <div class="4u">
+                            <a href={% url 'detail' section.id %}><p> {{ section.title }}</p></a>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

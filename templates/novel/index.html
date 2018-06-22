@@ -1,0 +1,137 @@
+
+{#{% load staticfiles %}#}
+{##}
+{#{% block title %}#}
+{#    NovelMenu#}
+{#{% endblock %}#}
+{##}
+{#{% block head %}#}
+    {#    <link rel="shortcut icon" href="../favicon.ico">#}
+{#    <link rel="stylesheet" type="text/css" href="{% static 'novel/css/normalize.css' %}"/>#}
+{#    <link rel="stylesheet" type="text/css" href="{% static 'novel/css/demo.css' %}"/>#}
+{#    <link rel="stylesheet" type="text/css" href="{% static 'novel/css/bookblock.css' %}"/>#}
+{#    <link rel="stylesheet" type="text/css" href="{% static 'novel/css/component.css' %}"/>#}
+{#    <script src="{% static 'novel/js/modernizr.custom.js' %}"></script>#}
+{#{% endblock %}#}
+{##}
+
+
+{##}
+{#{% block content %}#}
+    {#    <section class="post">#}
+    {#        <header class="major">#}
+    {#            <h1>Novel</h1>#}
+    {#        </header>#}
+    {#    </section>#}
+{#    <div id="scroll-wrap" class="container">#}
+{#        <div id="bookshelf" class="bookshelf">#}
+{#            <figure v-for="(novel,index) in novels">#}
+{#                <div class="book" v-bind:data-book="['book-'+ [[index+1]] ]"></div>#}
+{#                <div class="buttons"><a href="#">目录</a><a href="#">从头开始</a></div>#}
+{#                <figcaption><h2>[[novel.title]] <span>[[novel.author]]</span></h2></figcaption>#}
+{#                <div class="details">#}
+{#                    <ul>#}
+{#                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod#}
+{#                            tempor incididunt ut labore et dolore magna aliqua.#}
+{#                        </li>#}
+{#                        <li>Graham Press</li>#}
+{#                        <li>12.09.2010</li>#}
+{#                        <li>397 pages</li>#}
+{#                    </ul>#}
+{#                </div>#}
+{#            </figure>#}
+{##}
+{#{% endblock %}#}
+{##}
+{##}
+{#{% block script %}#}
+{#    <script src="{% static 'novel/js/bookblock.min.js' %}"></script>#}
+{#    <script src="{% static 'novel/js/classie.js' %}"></script>#}
+{#    <script src="{% static 'novel/js/bookshelf.js' %}"></script>#}
+{#    <script src="{% static 'axios.min.js' %}"></script>#}
+{#    <script src="{% static 'vue.js' %}"></script>#}
+{##}
+{#    <script>#}
+        {#Vue.config.delimiters = ["[[", "]]"];#}
+{#        var url = "http://127.0.0.1:8000/"#}
+{#        vm = new Vue({#}
+{#            el: '#bookshelf',#}
+{#            delimiters: ['[[', ']]'],#}
+{#            data: {#}
+{#                novels: [],#}
+{#                next_page: '',#}
+{#                now_num: '',#}
+{#                pagination_num: 1,#}
+{#            },#}
+{#            methods: {#}
+{#                getNovel: function () {#}
+{#                    var self = this;#}
+{#                    axios.get(url + 'novels/')#}
+{#                        .then(function (response) {#}
+{#                            console.log(response);#}
+{#                            self.novels = response.data.results#}
+{#                            self.next_page = response.data.next#}
+{#                            self.pagination_num = parseInt(response.data.count / 8)#}
+{#                        })#}
+{#                        .catch(function (error) {#}
+{#                            console.log(error);#}
+{#                        });#}
+{#                },#}
+{#                getMore: function () {#}
+{#                    var self = this;#}
+{#                    var novels = self.novels.appe#}
+{#                    console.log(self.next_page)#}
+{#                    axios.get(self.next_page)#}
+{#                        .then(function (response) {#}
+{#                            console.log(response)#}
+                            {#for (a in response.data.results) {#}
+                            {#    self.novels.push(response.data.results[a])#}
+{#                            self.novels = self.novels.concat(response.data.results)#}
+{#                            console.log(self.novels)#}
+{#                            self.next_page = response.data.next#}
+{#                        })#}
+{#                        .catch(function (error) {#}
+{#                            console.log(error);#}
+{#                        });#}
+{#                },#}
+{##}
+{#            },#}
+{#            mounted: function () {#}
+{#                this.getNovel();#}
+                {#window.addEventListener('scroll', this.getMore)#}
+                {#window.addEventListener('scroll', function () {#}
+                {#        if (document.body.scrollTop + window.innerHeight >= el.clientHeight) {#}
+                {#            console.log(self.novels)#}
+                {#            this.getMore();#}
+                {#        }#}
+                {#    }#}
+                {#)#}
+{#            },#}
+{##}
+{##}
+            {#directives:#}
+{##}
+{#        })#}
+        {#// 向具有指定ID的用户发出请求#}
+        {#axios.get('/novels/')#}
+        {#    .then(function (response) {#}
+        {#        console.log(response);#}
+        {#    })#}
+        {#    .catch(function (error) {#}
+        {#        console.log(error);#}
+        {#    });#}
+{##}
+        {#axios.post('/userfavs/',#}
+        {#    {#}
+        {#        userName: this.state.userName,#}
+        {#        userPassWD: this.state.userPassWD,#}
+        {#        currentTime: timeStamp#}
+        {#    },#}
+        {#    {#}
+        {#        headers:{#}
+        {#            'X-CSRFToken':cookies.get('csrftoken')#}
+        {#        }#}
+        {#    })#}
+        {#    .then((response) => {#}
+{#    </script>#}
+{#{% endblock %}#}

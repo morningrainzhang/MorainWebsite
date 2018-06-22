@@ -1,0 +1,70 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    {% block head %}{% endblock %}
+    <link rel="stylesheet" href="{% static 'novel/css/main.css' %}"/>
+    <noscript>
+        <link rel="stylesheet" href="{% static 'novel/css/noscript.css' %}"/>
+    </noscript>
+</head>
+
+<body>
+<!-- Wrapper -->
+<div id="wrapper">
+    <!-- Header -->
+    {% block intro %}{% endblock %}
+    <header id="header">
+        {% if user.is_authenticated %}
+            <a href="{% url 'users' %}" class="logo">{{ request.user }}</a>
+        {% else %}
+            <a href="{% url 'users' %}" class="logo">未登录</a>
+        {% endif %}
+
+    </header>
+
+    <!-- Nav -->
+    <nav id="nav">
+        {% block nav %}{% endblock %}
+
+        <ul class="icons">
+            <li><a href="https://weibo.com/morningrainzhang" class="icon fa-weibo"><span class="label">weibo</span></a></li>
+            <li>
+                <a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI1MjY2MjA0MQ==&scene=124#wechat_redirect"
+                   class="icon fa-weixin"><span class="label">WeChat</span></a></li>
+            <li><a href="https://github.com/morningrainzhang" class="icon fa-github"><span
+                    class="label">GitHub</span></a></li>
+            <li><a href="https://www.instagram.com/morainz/" class="icon fa-instagram"><span
+                    class="label">Instagram</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+        <!-- Post -->
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Copyright -->
+    <div id="copyright">
+        <ul>
+            <li>&copy; Morain</li>
+            <li>Build By Morain</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Scripts -->
+{% block script %}{% endblock %}
+<script src="{% static 'novel/js/jquery.min.js' %}"></script>
+<script src="{% static 'novel/js/jquery.scrollex.min.js' %}"></script>
+<script src="{% static 'novel/js/jquery.scrolly.min.js' %}"></script>
+<script src="{% static 'novel/js/skel.min.js' %}"></script>
+<script src="{% static 'novel/js/util.js' %}"></script>
+<script src="{% static 'novel/js/main.js' %}"></script>
+
+</body>
+</html>

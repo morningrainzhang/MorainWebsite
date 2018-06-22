@@ -1,0 +1,69 @@
+{% extends './base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    User
+{% endblock %}
+
+{% block nav %}
+    <ul class="links">
+        <li><a href="{% url 'novels' %}">Novel List</a></li>
+        {#        <li class="active"><a href="{% url 'novel_menu'  section_read_now.novel_id %}">Novel Menu</a></li>#}
+        {#        <li><a href="{% url 'novel_section' section_read_now.section_id %}">Novel Section</a></li>#}
+        {#        <li><a href="{% url 'novel_update' %}">Novel Update</a></li>#}
+    </ul>
+{% endblock %}
+
+
+
+{% block content %}
+    <section class="post">
+        <div class="row">
+            <div class="6u 12u$(small)">
+                <h2>Sign up</h2>
+                <form method="post" action="#">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" name="username" id="name" value="{{ register_form.username.errors.0 }}">
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" value="{{ register_form.email.errors.0 }}">
+                    </div>
+                    <div class="field">
+                        <label for="password">Password</label>
+                        <input type="text" name="password" id="password" value="{{ register_form.password.errors.0 }}">
+                    </div>
+                    <ul class="actions">
+                        <li><input type="submit" value="Sign up"></li>
+                    </ul>
+                </form>
+                {{ register_msg }}
+            </div>
+            <div class="6u$ 12u$(small)">
+                {% if user.is_authenticated %}
+                    <h2>Log Out</h2>
+                    <ul class="actions">
+                        <a href="{% url 'logout' %}" class="button special">Log Out</a>
+                    </ul>
+                {% else %}
+                    <h2>Sign in</h2>
+                    <form method="post" action="#">
+                        <div class="field">
+                            <label for="name">Name</label>
+                            <input type="text" name="username" id="name" value="{{ login_form.username.errors.0 }}">
+                        </div>
+                        <div class="field">
+                            <label for="password">Password</label>
+                            <input type="text" name="password" id="password" value="{{ login_form.password.errors.0 }}">
+                        </div>
+                        <ul class="actions">
+                            <li><input type="submit" value="Sign in"></li>
+                        </ul>
+                    </form>
+                {% endif %}
+                {{ login_msg }}
+            </div>
+        </div>
+    </section>
+{% endblock %}

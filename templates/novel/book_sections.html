@@ -1,0 +1,97 @@
+{% extends './base.html' %}
+{% load staticfiles %}
+{% load tags %}
+
+{% block title %}
+    NovelMenu
+{% endblock %}
+
+{% block nav %}
+    {% get_record_read_now request.user as record_read_now %}
+    <ul class="links">
+        <li><a href={% url 'novels' %}>Novel List</a></li>
+        {% if record_read_now %}
+            <li class="active"><a href="{% url 'sections' novel.id %}">Novel Home</a></li>
+            <li><a href="{% url 'detail' record_read_now.section.id %}">Reading</a></li>
+        {% else %}
+            <li class="active"><a>Novel Home</a></li>
+            <li><a>Reading</a></li>
+        {% endif %}
+        <li><a href="{% url 'update' %}">Novel Update</a></li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    {% get_previous_section novel as previous_section_list %}
+    {% get_last_section novel as last_section_list %}
+    <section class="post">
+        <header class="major">
+            <h1>{{ novel.title }}</h1>
+        </header>
+        <div class="box">
+            <div class="row">
+                <div class="6u 12u$(xsmall)">
+                    <h3>最新章节</h3>
+                    <ol>
+                        {% for section in last_section_list %}
+                            <li><a href={% url 'detail' section.id %}>{{ section.title }}</a></li>
+                        {% endfor %}
+                    </ol>
+                    <h6>......</h6>
+                </div>
+                <div class="6u 12u$(xsmall)">
+                    <h3>从头开始</h3>
+                    <ol>
+                        {% for section in previous_section_list %}
+                            <li><a href={% url 'detail' section.id %}>{{ section.title }}</a></li>
+                        {% endfor %}
+                    </ol>
+                    <h6>......</h6>
+                </div>
+            </div>
+        </div>
+        {#    {% verbatim %}#}
+        {#    {% endverbatim %}#}
+        <div class="box" id="section-feature">
+            <h3>全部章节</h3>
+            <hr>
+            <div class="row">
+                {% for section in section_list %}
+                    {#                <div class="col-lg-4" v-for="section in section_list.results">#}
+                    <div class="4u">
+                        <a href={% url 'detail' section.id %}><p> {{ section.title }}</p></a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <footer id="pagination-feature">
+            <div class="pagination">
+                {#                <a class="previous">First</a>#}
+                {% if section_list.has_previous %}
+                    <a href="?page={{ section_list.previous_page_number }}" class="previous">Prev</a>
+                {% else %}
+                    <a aria-hidden="true" class="previous">Prev</a>
+                {% endif %}
+                {% for page_num in page_range %}
+                    {% if  page_num < 0 %}
+                        <span class="extra">&hellip;</span>
+                    {% elif page_num == section_list.number %}
+                        <a href="?page={{ page_num }}" class="page active">{{ page_num }}</a>
+                    {% else %}
+                        <a href="?page={{ page_num }}" class="page">{{ page_num }}</a>
+                    {% endif %}
+                {% endfor %}
+                <!-- <a href="#"  v-for="pager in pagers" @click="go(pager)">{{ pager }}</a>-->
+
+                <!-- <a href="#" class="page"></a>-->
+                {% if section_list.has_next %}
+                    <a href="?page={{ section_list.next_page_number }}" class="next">Next</a>
+                {% else %}
+                    <a aria-hidden="true" class="next">Next</a>
+                {% endif %}
+                {#                <a class="next">Last</a>#}
+            </div>
+        </footer>
+    </section>
+{% endblock %}

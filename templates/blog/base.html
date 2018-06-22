@@ -1,0 +1,186 @@
+{% load staticfiles %}
+{% load blog_tags %}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="{% static 'blog/css/highlight/code.css' %}">
+    {#    <link rel="stylesheet" href="{% static 'css/code.css' %}">#}
+    <link rel="stylesheet" href="{% static 'blog/css/main.css' %}"/>
+    <!--[if lte IE 9]><link rel="stylesheet" href="{% static 'blog/css/ie9.css' %}" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="{% static 'blog/css/ie8.css' %}" /><![endif]-->
+</head>
+<body>
+{% get_all_type as article_with_type %}
+{% get_recent_articles as article_recent_list %}
+{% get_random_articles as article_random_list %}
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <h1><a href="{% url 'article_list' %}">MORIAN BLOG</a></h1>
+        <nav class="links">
+            <ul>
+                {% for type in article_with_type %}
+                    <li><a href="{% url 'article_type_list'  type.pk %}">{{ type.type_name }}</a></li>
+                {% endfor %}
+                <li><a href="#">标签页</a></li>
+                <li><a href="{% url 'article_with_date' %}">归档</a></li>
+            </ul>
+        </nav>
+        <nav class="main">
+            <ul>
+                <li class="search">
+                    <a class="fa-search" href="#search">Search</a>
+                    <form id="search" method="get" action="#">
+                        <input type="text" name="query" placeholder="Search"/>
+                    </form>
+                </li>
+                <li class="menu">
+                    <a class="fa-bars" href="#menu">Menu</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Menu -->
+    <section id="menu">
+
+        <!-- Search -->
+        <section>
+            <form class="search" method="get" action="#">
+                <input type="text" name="query" placeholder="Search"/>
+            </form>
+        </section>
+
+        <!-- Links -->
+        <section>
+
+            <ul class="links">
+                {% for type in article_with_type %}
+                    <li>
+                        <a href="#">
+                            <h3>{{ type.type_name }}</h3>
+                            <p>{{ type.type_describe }}</p>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <!-- Actions -->
+        <section>
+            <ul class="actions vertical">
+                <li><a href="#" class="button big fit">Log In</a></li>
+            </ul>
+        </section>
+
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Sidebar -->
+    <section id="sidebar">
+        <!-- Intro -->
+        <section id="intro">
+            <a href="{% url 'article_list' %}" class="logo"><img src="{% static "images/avatar.jpg" %}" alt=""/></a>
+            <header>
+                <h2>Morian Blog</h2>
+                <p>About his life,fitness,travel</p>
+                <p>learning,programming and</p>
+                <p>slave of cats</p>
+            </header>
+        </section>
+
+        {% block toc %}
+            {% if article %}
+                <div>
+                    <h2>文章目录</h2>
+                    {{ article.toc|safe }}
+                </div>
+            {% endif %}
+        {% endblock toc %}
+
+        <!-- Mini Posts -->
+        <section>
+            <div class="mini-posts">
+                {% for article in article_random_list %}
+                    <!-- Mini Post -->
+                    <article class="mini-post">
+                        <header>
+                            <h3><a href="{% url 'article_detail' article.pk %}">{{ article.title }}</a></h3>
+                            <time class="published"
+                                  datetime="{{ article.create_time }}">{{ article.create_time|date:"Y/m/d" }}</time>
+                            <a href="#" class="author"><img src="{% static "images/avatar.jpg" %}" alt=""/></a>
+                        </header>
+                        <a href="{% url 'article_detail' article.pk %}" class="image"><img
+                                src="{{ article.article_image.gallery.url }}" alt=""/></a>
+                    </article>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- Posts List -->
+        <section>
+            <ul class="posts">
+                {% for article in article_recent_list %}
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="{% url 'article_detail' article.pk %}">{{ article.title }}</a></h3>
+                                <time class="published"
+                                      datetime="{{ article.create_time }}">{{ article.create_time|date:"Y/m/d" }}</time>
+                            </header>
+                            <a href="{% url 'article_detail' article.pk %}" class="image"><img
+                                    src="{{ article.article_image.gallery.url }}" alt=""/></a>
+                        </article>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <!-- About -->
+        <section class="blurb">
+            <h2>About</h2>
+            <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod amet
+                placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at phasellus sed ultricies.</p>
+            <ul class="actions">
+                <li><a href="#" class="button">Learn More</a></li>
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <section id="footer">
+            <ul class="icons">
+                <li>
+                    <a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI1MjY2MjA0MQ==&scene=124#wechat_redirect"
+                       class="icon fa-weixin"><span class="label">WeChat</span></a></li>
+                <li><a href="https://weibo.com/u/1772088933" class="icon fa-weibo"><span class="label">weibo</span></a>
+                </li>
+                <li><a href="https://www.instagram.com/morainz/" class="icon fa-instagram"><span
+                        class="label">Instagram</span></a></li>
+                <li><a href="https://github.com/morningrainzhang" class="icon fa-github"><span
+                        class="label">GitHub</span></a></li>
+            </ul>
+            <p class="copyright">&copy; Build by Morain. </p>
+        </section>
+
+    </section>
+
+</div>
+
+<!-- Scripts -->
+<script src="{% static 'blog/js/jquery.min.js' %}"></script>
+<script src="{% static 'blog/js/skel.min.js' %}"></script>
+<script src="{% static 'blog/js/util.js' %}"></script>
+<!--[if lte IE 8]><script src="{% static 'blog/js/ie/respond.min.js' %}"></script><![endif]-->
+<script src="{% static 'blog/js/main.js' %}"></script>
+
+</body>
+</html>

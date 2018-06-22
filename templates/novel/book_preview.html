@@ -1,0 +1,413 @@
+{% extends './base.html' %}
+{% load staticfiles %}
+{% load tags %}
+
+{% block title %}
+    BookPreview
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'novel/css/normalize.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'novel/css/demo.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'novel/css/bookblock.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'novel/css/component.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'novel/css/semantic.css' %}">
+    <script src="{% static 'novel/js/modernizr.custom.js' %}"></script>
+{% endblock %}
+
+
+{#<link rel="stylesheet" type="text/css" href="{% static 'novel/css/custom.css' %}">#}
+{#    <style>#}
+{#        #main > * {#}
+{#            padding: 4rem 0 2rem 0;#}
+{#            border-top: solid 2px #eeeeee;#}
+{#            margin: 0;#}
+{#        }#}
+{#    </style>#}
+{% block intro %}
+    <div id="intro">
+        <h1>This is<br/>
+            Novel Book</h1>
+        <p>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈 <a
+                href="https://twitter.com/ajlkn">@Morain</a> for <a href="https://html5up.net">嘿嘿嘿</a><br/>
+            啦啦啦啦啦<a href="https://html5up.net/license">红红火火恍恍惚惚</a>.</p>
+        <ul class="actions">
+            <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block nav %}
+    {% get_record_read_now request.user as record_read_now %}
+    <ul class="links">
+        <li class="active"><a href={% url 'novels' %}>Novel List</a></li>
+        {% if record_read_now %}
+            <li><a href="{% url 'sections' record_read_now.novel.id %}">Novel Home</a></li>
+            <li><a href="{% url 'detail' record_read_now.section.id%}">Reading</a></li>
+        {% else %}
+            <li><a href="{% url 'users' %}">Novel Home</a></li>
+            <li><a href="{% url 'users' %}">Reading</a></li>
+        {% endif %}
+        <li><a href="{% url 'update' %}">Novel Update</a></li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div id="scroll-wrap" class="container">
+        <div class="main">
+            <div id="bookshelf" class="bookshelf">
+                {% for novel in novels %}
+                    <figure>
+                        <div class="book" data-book="book-{{ forloop.counter }}"></div>
+                        <div class="buttons"><a href="#">目录</a><a href="#">从头开始</a></div>
+                        <figcaption>
+                            <a href="{% url 'sections' novel.pk %}">
+                                <h2>
+                                    <a href="{% url 'sections' novel.pk %}">
+                                        {{ novel.title }}
+                                    </a>
+                                </h2>
+                                <span>{{ novel.author }}
+                                    {% if novel.id in  fav_novel_list %}
+                                        <a href="{% url 'userfavs' novel.pk %}" class="icon fa-star"><span
+                                                class="label"></span></a>
+                                        </span>
+                                    {% else %}
+                                        <a href="{% url 'userfavs' novel.pk %}" class="icon fa-star-o"><span
+                                                class="label"></span></a>
+                                        </span>
+                                    {% endif %}
+
+                            </a>
+                        </figcaption>
+                        <div class="details">
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua.
+                                </li>
+                                <li>Graham Press</li>
+                                <li>12.09.2010</li>
+                                <li>397 pages</li>
+                            </ul>
+                        </div>
+                    </figure>
+                {% endfor %}
+            </div>
+        </div><!-- /main -->
+
+    </div><!-- /container -->
+    <!-- Footer -->
+    <footer id="pagination-feature">
+        <div class="pagination">
+            {#                <a class="previous">First</a>#}
+            {% if novels.has_previous %}
+                <a href="?page={{ novels.previous_page_number }}" class="previous">Prev</a>
+            {% else %}
+                <a aria-hidden="true" class="previous">Prev</a>
+            {% endif %}
+            {% for page_num in page_range %}
+                {% if  page_num < 0 %}
+                    <span class="extra">&hellip;</span>
+                {% elif page_num == novels.number %}
+                    <a href="?page={{ page_num }}" class="page active">{{ page_num }}</a>
+                {% else %}
+                    <a href="?page={{ page_num }}" class="page">{{ page_num }}</a>
+                {% endif %}
+            {% endfor %}
+            <!-- <a href="#"  v-for="pager in pagers" @click="go(pager)">{{ pager }}</a>-->
+
+            <!-- <a href="#" class="page"></a>-->
+            {% if novels.has_next %}
+                <a href="?page={{ novels.next_page_number }}" class="next">Next</a>
+            {% else %}
+                <a aria-hidden="true" class="next">Next</a>
+            {% endif %}
+            {#                <a class="next">Last</a>#}
+        </div>
+    </footer>
+    <!-- for demo purpose we repeat each bookblock -->
+    {% for novel in novels %}
+        <div class="bb-custom-wrapper" id="book-{{ forloop.counter }}">
+            <div class="bb-bookblock">
+                <div class="bb-item">
+                    <div class="bb-custom-side page-layout-3">
+                        <div>
+                            <h3>Portraits</h3>
+                            <p>Photography (1999 &ndash; 2013)</p>
+                        </div>
+                    </div>
+                    <div class="bb-custom-side page-layout-3">
+                    </div>
+                </div>
+                <div class="bb-item">
+                    <div class="bb-custom-side page-layout-1">
+                        <h3>
+                            Chapter 9 <span>Nomadic Lifestyle</span>
+                        </h3>
+                    </div>
+                    <div class="bb-custom-side page-layout-1">
+                        <p>Candy canes lollipop macaroon marshmallow gummi bears tiramisu. Dessert croissant cupcake
+                            candy
+                            canes. Bear claw faworki faworki lemon drops. Faworki marzipan sugar plum jelly-o
+                            marzipan
+                            cookie.</p>
+                    </div>
+                </div>
+                <div class="bb-item">
+                    <div class="bb-custom-side page-layout-2">
+                        <div>
+                            <h3>Aa</h3>
+                            <p>Faworki marzipan sugar plum jelly-o marzipan. Soufflé tootsie roll jelly beans. Sweet
+                                icing
+                                croissant dessert bear claw. Brownie dessert cheesecake danish jelly pudding bear
+                                claw
+                                soufflé.</p>
+                        </div>
+                        <div>
+                            <h3>Bb</h3>
+                            <p>Faworki marzipan sugar plum jelly-o marzipan. Soufflé tootsie roll jelly beans. Sweet
+                                icing
+                                croissant dessert bear claw. Brownie dessert cheesecake danish jelly pudding bear
+                                claw
+                                soufflé.</p>
+                        </div>
+                    </div>
+                    <div class="bb-custom-side page-layout-2">
+                        <div>
+                            <h3>Cc</h3>
+                            <p>Faworki marzipan sugar plum jelly-o marzipan. Soufflé tootsie roll jelly beans. Sweet
+                                icing
+                                croissant dessert bear claw. Brownie dessert cheesecake danish jelly pudding bear
+                                claw
+                                soufflé.</p>
+                        </div>
+                        <div>
+                            <h3>Dd</h3>
+                            <p>Faworki marzipan sugar plum jelly-o marzipan. Soufflé tootsie roll jelly beans. Sweet
+                                icing
+                                croissant dessert bear claw. Brownie dessert cheesecake danish jelly pudding bear
+                                claw
+                                soufflé.</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /bb-bookblock -->
+            <nav>
+                <a href="#" class="bb-nav-prev">Previous</a>
+                <a href="#" class="bb-nav-next">Next</a>
+                <a href="#" class="bb-nav-close">Close</a>
+            </nav>
+        </div><!-- /bb-custom-wrapper -->
+    {% endfor %}
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'novel/js/bookblock.min.js' %}"></script>
+    <script src="{% static 'novel/js/classie.js' %}"></script>
+    <script src="{% static 'novel/js/bookshelf.js' %}"></script>
+    <script src="{% static 'novel/js/jquery.min.js' %}"></script>
+    <script src="{% static 'novel/js/semantic.js' %}"></script>
+{% endblock %}
+<!-- Following Menu -->
+{#<div class="ui large top fixed hidden menu">#}
+{#    <div class="ui container">#}
+{#        <a class="active item">Home</a>#}
+{#        <a class="item">Work</a>#}
+{#        <a class="item">Company</a>#}
+{#        <a class="item">Careers</a>#}
+{#        <div class="right menu">#}
+{#            <div class="item">#}
+{#                <a class="ui button">Log in</a>#}
+{#            </div>#}
+{#            <div class="item">#}
+{#                <a class="ui primary button">Sign Up</a>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+{##}
+{#<div class="ui vertical inverted sidebar menu">#}
+{#    <a class="active item">Home</a>#}
+{#    <a class="item">Work</a>#}
+{#    <a class="item">Company</a>#}
+{#    <a class="item">Careers</a>#}
+{#    <a class="item">Login</a>#}
+{#    <a class="item">Signup</a>#}
+{#</div>#}
+{##}
+{#<div class="ui inverted menu">#}
+{#    <a href="#" class="item">Home</a>#}
+{#    <a href="#" class="item">Fav</a>#}
+{#    <a href="#" class="item">About</a>#}
+{#</div>#}
+
+{#<div class="ui vertical basic segment masthead">#}
+{#    <div class="ui inverted text menu">#}
+{#        <div class="ui image">#}
+{#            <img class="ui avatar image" src="{% static 'novel/images/avatar.jpg' %}"/>#}
+{#        </div>#}
+{#    </div>#}
+{#    <div class="right menu">#}
+{#        <div class="item">#}
+{#            <button type="button" name="button" class="ui inverted circular button">Login</button>#}
+{#        </div>#}
+{#    </div>#}
+{#    <h1 class="ui center aligned header slogn">#}
+{#        big title#}
+{#        <p class="sub header">second title</p>#}
+{#        <button type="button" name="button" class="ui red circular button">register</button>#}
+{#    </h1>#}
+{#</div>#}
+{##}
+{#<div class="ui attached stackable  inverted  menu">#}
+{#  <div class="ui container">#}
+{#    <a class="item">#}
+{#      <i class="home icon"></i> Home#}
+{#    </a>#}
+{#    <a class="item">#}
+{#      <i class="grid layout icon"></i> Browse#}
+{#    </a>#}
+{#    <a class="item">#}
+{#      <i class="mail icon"></i> Messages#}
+{#    </a>#}
+{#    <div class="ui simple dropdown item">#}
+{#      More#}
+{#      <i class="dropdown icon"></i>#}
+{#      <div class="menu">#}
+{#        <a class="item"><i class="edit icon"></i> Edit Profile</a>#}
+{#        <a class="item"><i class="globe icon"></i> Choose Language</a>#}
+{#        <a class="item"><i class="settings icon"></i> Account Settings</a>#}
+{#      </div>#}
+{#    </div>#}
+{#    <div class="right item">#}
+{#      <div class="ui input"><input type="text" placeholder="Search..."></div>#}
+{#    </div>#}
+{#  </div>#}
+{#</div>#}
+
+
+{#{% verbatim myblock %}#}
+
+{#<div id="scroll-wrap" class="container">#}
+{#    <div class="main">#}
+{#        <div id="bookshelf" class="bookshelf">#}
+{#            {% for novel in novels %}#}
+{#                <figure>#}
+{#                    <div class="book" data-book="book-{{ forloop.counter }}"></div>#}
+{#                    <div class="buttons"><a href="#">目录</a><a href="#">从头开始</a></div>#}
+{#                    <figcaption><h2>{{ novel.title }} <span>{{ novel.author }}</span></h2></figcaption>#}
+{#                    <div class="details">#}
+{#                        <ul>#}
+{#                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod#}
+{#                                tempor incididunt ut labore et dolore magna aliqua.#}
+{#                            </li>#}
+{#                            <li>Graham Press</li>#}
+{#                            <li>12.09.2010</li>#}
+{#                            <li>397 pages</li>#}
+{#                        </ul>#}
+{#                    </div>#}
+{#                </figure>#}
+{#            {% endfor %}#}
+{#        </div>#}
+{#    </div><!-- /main -->#}
+{##}
+{#</div><!-- /container -->#}
+{##}
+{#<!-- Fullscreen BookBlock -->#}
+{#<!-- for demo purpose we repeat each bookblock -->#}
+{#{% for novel in novels %}#}
+{#    <div class="bb-custom-wrapper" id="book-{{ forloop.counter }}">#}
+{#        <div class="bb-bookblock">#}
+{#            <div class="bb-item">#}
+{#                <div class="bb-custom-side page-layout-3">#}
+{#                    <div>#}
+{#                        <h3>Portraits</h3>#}
+{#                        <p>Photography (1999 &ndash; 2013)</p>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="bb-custom-side page-layout-3">#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="bb-item">#}
+{#                <div class="bb-custom-side page-layout-1">#}
+{#                    <h3>#}
+{#                        Chapter 9 <span>Nomadic Lifestyle</span>#}
+{#                    </h3>#}
+{#                </div>#}
+{#                <div class="bb-custom-side page-layout-1">#}
+{#                    <p>Candy canes lollipop macaroon marshmallow gummi bears tiramisu. Dessert croissant cupcake candy#}
+{#                        canes. Bear claw faworki faworki lemon drops. Faworki marzipan sugar plum jelly-o marzipan#}
+{#                        cookie.</p>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="bb-item">#}
+{#                <div class="bb-custom-side page-layout-2">#}
+{#                    <div>#}
+{#                        <h3>Aa</h3>#}
+{#                        <p>Faworki marzipan sugar plum jelly-o marzipan. Soufflé tootsie roll jelly beans. Sweet icing#}
+{#                            croissant dessert bear claw. Brownie dessert cheesecake danish jelly pudding bear claw#}
+{#                            soufflé.</p>#}
+{#                    </div>#}
+{#                    <div>#}
+{#                        <h3>Bb</h3>#}
+{#                        <p>Faworki marzipan sugar plum jelly-o marzipan. Soufflé tootsie roll jelly beans. Sweet icing#}
+{#                            croissant dessert bear claw. Brownie dessert cheesecake danish jelly pudding bear claw#}
+{#                            soufflé.</p>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="bb-custom-side page-layout-2">#}
+{#                    <div>#}
+{#                        <h3>Cc</h3>#}
+{#                        <p>Faworki marzipan sugar plum jelly-o marzipan. Soufflé tootsie roll jelly beans. Sweet icing#}
+{#                            croissant dessert bear claw. Brownie dessert cheesecake danish jelly pudding bear claw#}
+{#                            soufflé.</p>#}
+{#                    </div>#}
+{#                    <div>#}
+{#                        <h3>Dd</h3>#}
+{#                        <p>Faworki marzipan sugar plum jelly-o marzipan. Soufflé tootsie roll jelly beans. Sweet icing#}
+{#                            croissant dessert bear claw. Brownie dessert cheesecake danish jelly pudding bear claw#}
+{#                            soufflé.</p>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div><!-- /bb-bookblock -->#}
+{#        <nav>#}
+{#            <a href="#" class="bb-nav-prev">Previous</a>#}
+{#            <a href="#" class="bb-nav-next">Next</a>#}
+{#            <a href="#" class="bb-nav-close">Close</a>#}
+{#        </nav>#}
+{#    </div><!-- /bb-custom-wrapper -->#}
+{#{% endfor %}#}
+
+{#<div class="ui inverted vertical footer segment">#}
+{#    <div class="ui container">#}
+{#        <div class="ui stackable inverted divided equal height stackable grid">#}
+{#            <div class="three wide column">#}
+{#                <h4 class="ui inverted header">About</h4>#}
+{#                <div class="ui inverted link list">#}
+{#                    <a href="#" class="item">Sitemap</a>#}
+{#                    <a href="#" class="item">Contact Us</a>#}
+{#                    <a href="#" class="item">Religious Ceremonies</a>#}
+{#                    <a href="#" class="item">Gazebo Plans</a>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="three wide column">#}
+{#                <h4 class="ui inverted header">Services</h4>#}
+{#                <div class="ui inverted link list">#}
+{#                    <a href="#" class="item">Banana Pre-Order</a>#}
+{#                    <a href="#" class="item">DNA FAQ</a>#}
+{#                    <a href="#" class="item">How To Access</a>#}
+{#                    <a href="#" class="item">Favorite X-Men</a>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="seven wide column">#}
+{#                <h4 class="ui inverted header">Footer Header</h4>#}
+{#                <p>Extra space for a call to action inside the footer that could help re-engage users.</p>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+
+
+

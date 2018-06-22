@@ -1,0 +1,511 @@
+[2018-06-07 21:54:45,099: DEBUG/MainProcess] Setting default socket timeout to 30
+[2018-06-07 21:54:45,100: INFO/MainProcess] beat: Starting...
+[2018-06-07 21:54:45,100: DEBUG/MainProcess] DatabaseScheduler: intial read
+[2018-06-07 21:54:45,100: INFO/MainProcess] Writing entries (0)...
+[2018-06-07 21:54:45,327: DEBUG/MainProcess] DatabaseScheduler: Fetching database schedule
+[2018-06-07 21:54:45,391: DEBUG/MainProcess] Current schedule:
+<ModelEntry: celery.backend_cleanup celery.backend_cleanup(*[], **{}) <crontab: 0 4 * * * (m/h/d/dM/MY)>>
+<ModelEntry: 1 library.tasks.update_novel(*[], **{}) <freq: 1.00 minute>>
+[2018-06-07 21:54:45,680: DEBUG/MainProcess] beat: Ticking with max interval->5.00 seconds
+[2018-06-07 21:54:45,765: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:54:50,760: DEBUG/MainProcess] beat: Synchronizing schedule...
+[2018-06-07 21:54:50,760: INFO/MainProcess] Writing entries (0)...
+[2018-06-07 21:54:50,832: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:54:55,869: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:55:00,974: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:55:05,999: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:55:11,023: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:55:16,065: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:55:21,095: DEBUG/MainProcess] beat: Waking up in 3.88 seconds.
+[2018-06-07 21:55:25,005: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 21:55:25,048: DEBUG/MainProcess] library.tasks.update_novel sent. id->1fe9ff2e-5a4e-47d2-87a4-8cdf40c9f24b
+[2018-06-07 21:55:25,048: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:55:30,072: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:55:35,144: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:55:40,171: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:55:45,194: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:55:50,217: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:55:55,241: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:56:00,263: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:56:05,285: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:56:10,316: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:56:15,340: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:56:20,373: DEBUG/MainProcess] beat: Waking up in 4.62 seconds.
+[2018-06-07 21:56:25,030: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 21:56:25,141: DEBUG/MainProcess] library.tasks.update_novel sent. id->aca000d6-235f-4889-80c9-8163da13d144
+[2018-06-07 21:56:25,141: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:56:30,179: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:56:35,208: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:56:40,231: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:56:45,279: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:56:50,365: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:56:55,419: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:57:00,536: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:57:05,559: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:57:10,588: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:57:15,637: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:57:20,740: DEBUG/MainProcess] beat: Waking up in 4.28 seconds.
+[2018-06-07 21:57:25,053: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 21:57:25,082: DEBUG/MainProcess] library.tasks.update_novel sent. id->bf288df5-29cc-4524-be0c-fbb661078d74
+[2018-06-07 21:57:25,082: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:57:30,179: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:57:35,206: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:57:40,231: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:57:42,574: INFO/MainProcess] Writing entries (1)...
+[2018-06-07 21:57:42,746: INFO/MainProcess] Writing entries (0)...
+[2018-06-07 21:57:42,788: INFO/MainProcess] Writing entries (0)...
+[2018-06-07 21:57:42,938: INFO/MainProcess] Writing entries (0)...
+[2018-06-07 21:57:46,275: DEBUG/MainProcess] Setting default socket timeout to 30
+[2018-06-07 21:57:46,275: INFO/MainProcess] beat: Starting...
+[2018-06-07 21:57:46,276: DEBUG/MainProcess] DatabaseScheduler: intial read
+[2018-06-07 21:57:46,276: INFO/MainProcess] Writing entries (0)...
+[2018-06-07 21:57:46,417: DEBUG/MainProcess] DatabaseScheduler: Fetching database schedule
+[2018-06-07 21:57:46,470: DEBUG/MainProcess] Current schedule:
+<ModelEntry: celery.backend_cleanup celery.backend_cleanup(*[], **{}) <crontab: 0 4 * * * (m/h/d/dM/MY)>>
+<ModelEntry: 1 library.tasks.update_novel(*[], **{}) <freq: 1.00 minute>>
+[2018-06-07 21:57:46,824: DEBUG/MainProcess] beat: Ticking with max interval->5.00 seconds
+[2018-06-07 21:57:46,981: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:57:51,974: DEBUG/MainProcess] beat: Synchronizing schedule...
+[2018-06-07 21:57:51,975: INFO/MainProcess] Writing entries (0)...
+[2018-06-07 21:57:52,047: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:57:57,073: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:58:02,097: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:58:07,130: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:58:12,154: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:58:17,188: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:58:22,211: DEBUG/MainProcess] beat: Waking up in 2.83 seconds.
+[2018-06-07 21:58:25,077: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 21:58:25,119: DEBUG/MainProcess] library.tasks.update_novel sent. id->74ac7caa-2698-4fa2-b6ca-81b782f6b215
+[2018-06-07 21:58:25,119: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:58:30,141: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:58:35,190: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:58:40,214: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:58:45,255: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:58:50,288: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:58:55,313: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:59:00,358: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:59:05,386: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:59:10,590: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:59:15,615: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:59:20,644: DEBUG/MainProcess] beat: Waking up in 4.42 seconds.
+[2018-06-07 21:59:25,108: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 21:59:25,135: DEBUG/MainProcess] library.tasks.update_novel sent. id->cf4608a0-3207-410e-80b7-5e50cc78f3db
+[2018-06-07 21:59:25,136: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:59:30,164: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:59:35,184: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:59:40,202: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:59:45,224: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:59:50,265: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 21:59:55,290: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:00:00,322: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:00:05,368: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:00:10,402: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:00:15,429: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:00:20,457: DEBUG/MainProcess] beat: Waking up in 4.64 seconds.
+[2018-06-07 22:00:25,130: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 22:00:25,173: DEBUG/MainProcess] library.tasks.update_novel sent. id->9ba33b59-5364-4536-9cdf-935826a380fe
+[2018-06-07 22:00:25,174: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:00:30,196: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:00:35,218: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:00:40,261: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:00:45,286: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:00:50,309: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:00:55,304: DEBUG/MainProcess] beat: Synchronizing schedule...
+[2018-06-07 22:00:55,304: INFO/MainProcess] Writing entries (1)...
+[2018-06-07 22:00:55,428: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:01:00,457: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:01:05,478: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:01:10,500: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:01:15,614: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:01:20,635: DEBUG/MainProcess] beat: Waking up in 4.49 seconds.
+[2018-06-07 22:01:25,151: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 22:01:25,180: DEBUG/MainProcess] library.tasks.update_novel sent. id->f1bf7b6b-2362-4c19-bb8c-dc58dc3f137b
+[2018-06-07 22:01:25,181: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:01:30,290: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:01:35,310: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:01:40,348: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:01:45,370: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:01:50,413: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:01:55,468: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:02:00,496: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:02:05,523: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:02:10,544: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:02:15,584: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:02:20,637: DEBUG/MainProcess] beat: Waking up in 4.50 seconds.
+[2018-06-07 22:02:25,185: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 22:02:25,219: DEBUG/MainProcess] library.tasks.update_novel sent. id->26656dfe-094e-4d34-b8f5-3d3bc3c3dede
+[2018-06-07 22:02:25,220: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:02:30,241: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:02:35,310: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:02:40,331: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:02:45,352: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:02:50,399: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:02:55,422: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:03:00,476: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:03:05,496: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:03:10,519: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:03:15,549: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:03:20,571: DEBUG/MainProcess] beat: Waking up in 4.61 seconds.
+[2018-06-07 22:03:25,217: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 22:03:25,266: DEBUG/MainProcess] library.tasks.update_novel sent. id->9ea4fe2d-9615-40be-adf6-59f08f846270
+[2018-06-07 22:03:25,266: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:03:30,289: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:03:35,318: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:03:40,347: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:03:45,369: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:03:50,395: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:03:55,416: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:04:00,417: DEBUG/MainProcess] beat: Synchronizing schedule...
+[2018-06-07 22:04:00,417: INFO/MainProcess] Writing entries (1)...
+[2018-06-07 22:04:00,538: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:04:05,565: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:04:10,585: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:04:15,691: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:04:20,725: DEBUG/MainProcess] beat: Waking up in 4.48 seconds.
+[2018-06-07 22:04:25,238: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 22:04:25,267: DEBUG/MainProcess] library.tasks.update_novel sent. id->07acb970-f243-4262-bd65-d08bbc4702e4
+[2018-06-07 22:04:25,267: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:04:30,374: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:04:35,408: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:04:40,437: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:04:45,463: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:04:50,485: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:04:55,560: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:05:00,586: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:05:05,613: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:05:10,635: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:05:15,654: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:05:20,720: DEBUG/MainProcess] beat: Waking up in 4.51 seconds.
+[2018-06-07 22:05:25,264: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 22:05:25,297: DEBUG/MainProcess] library.tasks.update_novel sent. id->bc03cf46-f978-4205-bfcd-d4f0e3b1c758
+[2018-06-07 22:05:25,297: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:05:30,317: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:05:35,346: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:05:40,376: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:05:45,398: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:05:50,420: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:05:55,449: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:06:00,478: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:06:05,507: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:06:10,534: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:06:15,562: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:06:20,615: DEBUG/MainProcess] beat: Waking up in 4.64 seconds.
+[2018-06-07 22:06:25,288: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 22:06:25,316: DEBUG/MainProcess] library.tasks.update_novel sent. id->9d850002-1a63-455e-b0e6-5da735da8d10
+[2018-06-07 22:06:25,317: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:06:30,343: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:06:35,362: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:06:40,389: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:06:45,430: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:06:50,457: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:06:55,483: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:07:00,505: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:07:05,499: DEBUG/MainProcess] beat: Synchronizing schedule...
+[2018-06-07 22:07:05,499: INFO/MainProcess] Writing entries (1)...
+[2018-06-07 22:07:05,647: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:07:10,669: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:07:15,691: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:07:20,721: DEBUG/MainProcess] beat: Waking up in 4.56 seconds.
+[2018-06-07 22:07:25,311: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 22:07:25,340: DEBUG/MainProcess] library.tasks.update_novel sent. id->4748a5ac-b16e-4974-9f18-a94126fb2af0
+[2018-06-07 22:07:25,340: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:07:30,359: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:07:35,388: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:07:40,478: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:07:45,505: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:07:50,533: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:07:55,554: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:08:00,576: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:08:05,642: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:08:10,667: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:08:15,689: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:08:20,716: DEBUG/MainProcess] beat: Waking up in 4.58 seconds.
+[2018-06-07 22:08:25,336: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 22:08:25,365: DEBUG/MainProcess] library.tasks.update_novel sent. id->9b407026-2b61-4eb8-bb1e-06d6bd3fbe1a
+[2018-06-07 22:08:25,366: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:08:30,395: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:08:35,439: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:08:36,227: INFO/MainProcess] Writing entries (1)...
+[2018-06-07 22:08:36,388: INFO/MainProcess] Writing entries (0)...
+[2018-06-07 22:08:36,426: INFO/MainProcess] Writing entries (0)...
+[2018-06-07 22:08:36,465: INFO/MainProcess] Writing entries (0)...
+[2018-06-07 22:08:46,080: DEBUG/MainProcess] Setting default socket timeout to 30
+[2018-06-07 22:08:46,081: INFO/MainProcess] beat: Starting...
+[2018-06-07 22:08:46,081: DEBUG/MainProcess] DatabaseScheduler: intial read
+[2018-06-07 22:08:46,081: INFO/MainProcess] Writing entries (0)...
+[2018-06-07 22:08:46,239: DEBUG/MainProcess] DatabaseScheduler: Fetching database schedule
+[2018-06-07 22:08:46,306: DEBUG/MainProcess] Current schedule:
+<ModelEntry: celery.backend_cleanup celery.backend_cleanup(*[], **{}) <crontab: 0 4 * * * (m/h/d/dM/MY)>>
+<ModelEntry: 1 library.tasks.update_novel(*[], **{}) <freq: 1.00 minute>>
+[2018-06-07 22:08:46,737: DEBUG/MainProcess] beat: Ticking with max interval->5.00 seconds
+[2018-06-07 22:08:46,815: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:08:51,810: DEBUG/MainProcess] beat: Synchronizing schedule...
+[2018-06-07 22:08:51,810: INFO/MainProcess] Writing entries (0)...
+[2018-06-07 22:08:51,886: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:08:56,998: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:09:02,025: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:09:07,067: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:09:12,096: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:09:17,125: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:09:22,191: DEBUG/MainProcess] beat: Waking up in 3.14 seconds.
+[2018-06-07 22:09:25,368: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 22:09:25,406: DEBUG/MainProcess] library.tasks.update_novel sent. id->08e44e04-f6c8-488f-866a-fc7f88efdbd3
+[2018-06-07 22:09:25,406: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:09:30,459: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:09:35,480: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:09:40,504: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:09:45,534: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:09:50,557: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:09:55,578: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:10:00,619: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:10:05,648: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:10:10,676: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:10:15,699: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:10:20,737: DEBUG/MainProcess] beat: Waking up in 4.62 seconds.
+[2018-06-07 22:10:25,395: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 22:10:25,426: DEBUG/MainProcess] library.tasks.update_novel sent. id->63027632-8b8e-4062-9aab-2a196d01977e
+[2018-06-07 22:10:25,426: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:10:30,452: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:10:35,652: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:10:40,679: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:10:45,705: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:10:50,730: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:10:55,769: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:11:00,796: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:11:05,843: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:11:10,872: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:11:15,896: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:11:20,918: DEBUG/MainProcess] beat: Waking up in 4.47 seconds.
+[2018-06-07 22:11:25,419: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 22:11:25,475: DEBUG/MainProcess] library.tasks.update_novel sent. id->837ad26c-9981-4dd3-8e7d-5b9b3a8265e2
+[2018-06-07 22:11:25,476: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:11:30,498: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:11:35,527: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:11:40,609: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:11:45,634: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:11:50,663: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:11:55,656: DEBUG/MainProcess] beat: Synchronizing schedule...
+[2018-06-07 22:11:55,656: INFO/MainProcess] Writing entries (1)...
+[2018-06-07 22:11:55,798: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:12:00,833: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:12:05,862: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:12:10,969: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:12:16,009: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:12:21,034: DEBUG/MainProcess] beat: Waking up in 4.38 seconds.
+[2018-06-07 22:12:25,445: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 22:12:25,477: DEBUG/MainProcess] library.tasks.update_novel sent. id->097efe41-4434-4dc4-8d80-368588cfb33a
+[2018-06-07 22:12:25,477: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:12:30,532: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:12:35,557: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:12:40,614: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:12:45,644: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:12:50,674: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:12:55,707: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:13:00,730: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:13:05,847: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:13:10,873: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:13:15,915: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:13:20,942: DEBUG/MainProcess] beat: Waking up in 4.49 seconds.
+[2018-06-07 22:13:25,471: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 22:13:25,504: DEBUG/MainProcess] library.tasks.update_novel sent. id->b83eb173-9296-4a85-91ce-2c795119e56d
+[2018-06-07 22:13:25,504: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:13:30,532: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:13:35,556: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:13:40,600: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:13:45,709: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:13:50,737: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:13:55,760: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:14:00,791: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:14:05,822: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:14:10,843: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:14:15,876: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:14:20,899: DEBUG/MainProcess] beat: Waking up in 4.56 seconds.
+[2018-06-07 22:14:25,518: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 22:14:25,547: DEBUG/MainProcess] library.tasks.update_novel sent. id->be7b54a3-79c8-4d80-ba80-121ea9826f15
+[2018-06-07 22:14:25,547: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:14:30,584: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:14:35,607: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:14:40,653: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:14:45,686: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:14:46,835: INFO/MainProcess] Writing entries (1)...
+[2018-06-07 22:14:46,953: INFO/MainProcess] Writing entries (0)...
+[2018-06-07 22:14:46,997: INFO/MainProcess] Writing entries (0)...
+[2018-06-07 22:14:47,038: INFO/MainProcess] Writing entries (0)...
+[2018-06-07 22:14:51,218: DEBUG/MainProcess] Setting default socket timeout to 30
+[2018-06-07 22:14:51,219: INFO/MainProcess] beat: Starting...
+[2018-06-07 22:14:51,219: DEBUG/MainProcess] DatabaseScheduler: intial read
+[2018-06-07 22:14:51,219: INFO/MainProcess] Writing entries (0)...
+[2018-06-07 22:14:51,375: DEBUG/MainProcess] DatabaseScheduler: Fetching database schedule
+[2018-06-07 22:14:51,515: DEBUG/MainProcess] Current schedule:
+<ModelEntry: celery.backend_cleanup celery.backend_cleanup(*[], **{}) <crontab: 0 4 * * * (m/h/d/dM/MY)>>
+<ModelEntry: 1 library.tasks.update_novel(*[], **{}) <freq: 1.00 minute>>
+[2018-06-07 22:14:51,848: DEBUG/MainProcess] beat: Ticking with max interval->5.00 seconds
+[2018-06-07 22:14:51,923: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:14:56,916: DEBUG/MainProcess] beat: Synchronizing schedule...
+[2018-06-07 22:14:56,917: INFO/MainProcess] Writing entries (0)...
+[2018-06-07 22:14:56,998: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:15:02,020: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:15:07,053: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:15:12,115: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:15:17,142: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:15:22,169: DEBUG/MainProcess] beat: Waking up in 3.34 seconds.
+[2018-06-07 22:15:25,546: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 22:15:25,580: DEBUG/MainProcess] library.tasks.update_novel sent. id->f8b6c8dc-73ce-42bc-9cf8-ff53656212d4
+[2018-06-07 22:15:25,580: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:15:30,603: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:15:35,626: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:15:40,651: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:15:45,676: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:15:50,702: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:15:55,724: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:16:00,752: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:16:05,775: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:16:10,800: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:16:15,837: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:16:20,858: DEBUG/MainProcess] beat: Waking up in 4.68 seconds.
+[2018-06-07 22:16:25,642: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 22:16:25,674: DEBUG/MainProcess] library.tasks.update_novel sent. id->9e7a60af-e88b-47b4-b1f3-29751d09f1aa
+[2018-06-07 22:16:25,675: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:16:30,694: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:16:35,760: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:16:40,784: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:16:45,819: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:16:50,848: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:16:55,871: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:17:00,896: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:17:05,921: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:17:10,943: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:17:15,975: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:17:20,999: DEBUG/MainProcess] beat: Waking up in 4.63 seconds.
+[2018-06-07 22:17:25,791: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 22:17:25,822: DEBUG/MainProcess] library.tasks.update_novel sent. id->21a7cf71-25f7-4741-aa79-c1accb892d86
+[2018-06-07 22:17:25,823: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:17:30,847: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:17:35,865: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:17:40,891: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:17:45,919: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:17:50,959: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:17:55,997: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:18:00,992: DEBUG/MainProcess] beat: Synchronizing schedule...
+[2018-06-07 22:18:00,992: INFO/MainProcess] Writing entries (1)...
+[2018-06-07 22:18:01,198: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:18:06,225: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:18:11,246: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:18:16,291: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:18:21,365: DEBUG/MainProcess] beat: Waking up in 4.42 seconds.
+[2018-06-07 22:18:25,821: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 22:18:25,853: DEBUG/MainProcess] library.tasks.update_novel sent. id->cdea645f-1822-4288-bd7e-c029468aa721
+[2018-06-07 22:18:25,854: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:18:30,878: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:18:35,907: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:18:40,931: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:18:45,955: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:18:50,980: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:18:56,008: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:19:01,038: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:19:06,092: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:19:11,121: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:19:16,151: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:19:21,176: DEBUG/MainProcess] beat: Waking up in 4.63 seconds.
+[2018-06-07 22:19:25,848: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 22:19:25,879: DEBUG/MainProcess] library.tasks.update_novel sent. id->0c4c952f-c038-4cde-8ceb-b5b622881410
+[2018-06-07 22:19:25,879: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:19:30,905: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:19:35,949: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:19:41,057: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:19:46,078: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:19:51,104: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:19:56,135: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:20:01,158: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:20:06,225: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:20:11,248: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:20:16,292: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:20:21,320: DEBUG/MainProcess] beat: Waking up in 4.52 seconds.
+[2018-06-07 22:20:25,872: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 22:20:25,904: DEBUG/MainProcess] library.tasks.update_novel sent. id->2bef07b5-7c36-48a1-910f-2c3e5da15342
+[2018-06-07 22:20:25,904: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:20:30,941: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:20:35,968: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:20:41,000: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:20:46,069: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:20:51,115: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:20:56,139: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:21:01,181: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:21:06,176: DEBUG/MainProcess] beat: Synchronizing schedule...
+[2018-06-07 22:21:06,176: INFO/MainProcess] Writing entries (1)...
+[2018-06-07 22:21:06,411: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:21:11,437: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:21:16,462: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:21:21,487: DEBUG/MainProcess] beat: Waking up in 4.38 seconds.
+[2018-06-07 22:21:25,898: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 22:21:25,930: DEBUG/MainProcess] library.tasks.update_novel sent. id->30bd7ef0-db18-4f39-865b-81d83a7faf83
+[2018-06-07 22:21:25,931: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:21:30,956: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:21:35,983: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:21:41,022: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:21:46,073: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:21:51,098: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:21:56,125: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:22:01,164: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:22:03,206: INFO/MainProcess] Writing entries (1)...
+[2018-06-07 22:22:03,461: INFO/MainProcess] Writing entries (0)...
+[2018-06-07 22:22:03,602: INFO/MainProcess] Writing entries (0)...
+[2018-06-07 22:22:03,659: INFO/MainProcess] Writing entries (0)...
+[2018-06-07 22:22:06,593: DEBUG/MainProcess] Setting default socket timeout to 30
+[2018-06-07 22:22:06,594: INFO/MainProcess] beat: Starting...
+[2018-06-07 22:22:06,594: DEBUG/MainProcess] DatabaseScheduler: intial read
+[2018-06-07 22:22:06,594: INFO/MainProcess] Writing entries (0)...
+[2018-06-07 22:22:06,951: DEBUG/MainProcess] DatabaseScheduler: Fetching database schedule
+[2018-06-07 22:22:07,049: DEBUG/MainProcess] Current schedule:
+<ModelEntry: celery.backend_cleanup celery.backend_cleanup(*[], **{}) <crontab: 0 4 * * * (m/h/d/dM/MY)>>
+<ModelEntry: 1 library.tasks.update_novel(*[], **{}) <freq: 1.00 minute>>
+[2018-06-07 22:22:07,662: DEBUG/MainProcess] beat: Ticking with max interval->5.00 seconds
+[2018-06-07 22:22:07,837: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:22:12,829: DEBUG/MainProcess] beat: Synchronizing schedule...
+[2018-06-07 22:22:12,829: INFO/MainProcess] Writing entries (0)...
+[2018-06-07 22:22:12,908: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:22:17,935: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:22:22,958: DEBUG/MainProcess] beat: Waking up in 2.93 seconds.
+[2018-06-07 22:22:25,924: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 22:22:25,962: DEBUG/MainProcess] library.tasks.update_novel sent. id->b08136e6-3db9-467c-8286-6b7e2d90d895
+[2018-06-07 22:22:25,962: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:22:30,986: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:22:36,093: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:22:41,116: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:22:46,157: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:22:51,181: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:22:56,224: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:23:01,248: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:23:06,269: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:23:11,297: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:23:16,334: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:23:21,379: DEBUG/MainProcess] beat: Waking up in 4.53 seconds.
+[2018-06-07 22:23:25,956: INFO/MainProcess] Scheduler: Sending due task 1 (library.tasks.update_novel)
+[2018-06-07 22:23:26,000: DEBUG/MainProcess] library.tasks.update_novel sent. id->630eb9c9-f879-4696-ba5d-299de08c706b
+[2018-06-07 22:23:26,000: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:23:31,024: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:23:36,526: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:23:41,550: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-07 22:23:46,673: DEBUG/MainProcess] beat: Waking up in 4.99 seconds.
+[2018-06-08 21:41:09,335: ERROR/MainProcess] Database gave error: OperationalError(2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "/Users/zhangchenyu/workspace/env_django/lib/python3.6/site-packages/django/db/backends/base/base.py", line 239, in _commit
+    return self.connection.commit()
+_mysql_exceptions.OperationalError: (2013, 'Lost connection to MySQL server during query')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/zhangchenyu/workspace/env_django/lib/python3.6/site-packages/djcelery/schedulers.py", line 179, in schedule_changed
+    transaction.commit()
+  File "/Users/zhangchenyu/workspace/env_django/lib/python3.6/site-packages/django/db/transaction.py", line 35, in commit
+    get_connection(using).commit()
+  File "/Users/zhangchenyu/workspace/env_django/lib/python3.6/site-packages/django/db/backends/base/base.py", line 261, in commit
+    self._commit()
+  File "/Users/zhangchenyu/workspace/env_django/lib/python3.6/site-packages/django/db/backends/base/base.py", line 239, in _commit
+    return self.connection.commit()
+  File "/Users/zhangchenyu/workspace/env_django/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/zhangchenyu/workspace/env_django/lib/python3.6/site-packages/django/db/backends/base/base.py", line 239, in _commit
+    return self.connection.commit()
+django.db.utils.OperationalError: (2013, 'Lost connection to MySQL server during query')

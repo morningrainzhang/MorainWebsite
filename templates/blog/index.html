@@ -1,0 +1,56 @@
+{% extends './base.html' %}
+
+{% load staticfiles %}
+
+{% load blog_tags %}
+
+{% block title %}
+    Morain'blog
+{% endblock %}
+
+{% block content %}
+    <!-- Post -->
+    {% for article in page_of_articles %}
+        <article class="post">
+            <header>
+                <div class="title">
+                    <h2><a href="{% url 'article_detail' article.pk %}">{{ article.title }}</a></h2>
+                    <p>{{ article.describe }}</p>
+                </div>
+                <div class="meta">
+                    <time class="published"
+                          datetime="{{ article.create_time }}">{{ article.create_time|date:"Y/m/d" }}</time>
+                    <a href="#" class="author"><span class="name">{{ article.author }}</span><img
+                            src="{% static "images/avatar.jpg" %}"
+                            alt=""/></a>
+                </div>
+            </header>
+            <a href="{% url 'article_detail' article.pk %}" class="image featured"><img
+                    src="/media/{{ article.article_image}}" alt="加载中"/></a>
+            {#            <p>{{ article.content }}</p>#}
+            <footer>
+                <ul class="actions">
+                    <li><a href="{% url 'article_detail' article.pk %}" class="button big">Reading</a></li>
+                </ul>
+                <ul class="stats">
+                    <li><a href="#">{{ article.article_type }}</a></li>
+                    <li><a href="#" class="icon fa-heart">28</a></li>
+                    <li><a href="#" class="icon fa-comment">128</a></li>
+                </ul>
+            </footer>
+        </article>
+    {% endfor %}
+    <ul class="actions pagination">
+        {% if page_of_articles.has_previous %}
+            <li><a href="?page={{ page_of_articles.previous_page_number }}" class="button big previous">Previous
+                Page</a></li>
+        {% else %}
+            <li><a href="" class="disabled button big previous">Previous Page</a></li>
+        {% endif %}
+        {% if page_of_articles.has_next %}
+            <li><a href="?page={{ page_of_articles.next_page_number }}" class="button big next">Next Page</a></li>
+        {% else %}
+            <li><a href="" class="disabled button big next">Next Page</a></li>
+        {% endif %}
+    </ul>
+{% endblock %}

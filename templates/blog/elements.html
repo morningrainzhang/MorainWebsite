@@ -1,0 +1,48 @@
+{% extends './base.html' %}
+
+{% load staticfiles %}
+{% load blog_tags %}
+
+{% block title %}
+    article'detail
+{% endblock %}
+
+{% block content %}
+    <article class="post">
+        <header>
+            <div class="title">
+                <h2><a href="#">{{ article.title }}</a></h2>
+                <p>{{ article.describe }}</p>
+            </div>
+            <div class="meta">
+                <time class="published"
+                      datetime="{{ article.create_time }}">{{ article.create_time|date:"Y/m/d" }}</time>
+                <a href="#" class="author"><span class="name">{{ article.author }}</span><img
+                        src="{% static "images/avatar.jpg" %}" alt=""/></a>
+            </div>
+        </header>
+
+        <section class='mk'>
+            {{ article.content|safe }}
+        </section>
+    </article>
+    <!-- Pagination -->
+    <ul class="actions pagination">
+        {% if previous_article %}
+            <li><a href="{% url 'article_detail' previous_article.pk %}"
+                   class=" button big previous">{{ previous_article.title }}</a></li>
+        {% else %}
+            <li><a class="disabled button big previous">Previous Page</a></li>
+        {% endif %}
+        </li>
+        <li class="am-pagination-next">
+            {% if next_article %}
+                <li><a href="{% url 'article_detail' next_article.pk %}"
+                       class=" button big next">{{ next_article.title }}</a></li>
+            {% else %}
+                <li><a class="disabled button big next">Next Page</a></li>
+            {% endif %}
+    </ul>
+{% endblock %}
+
+

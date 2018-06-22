@@ -1,0 +1,49 @@
+{% extends './base.html' %}
+
+{% load staticfiles %}
+{% load blog_tags %}
+
+{% block title %}
+    article'detail
+{% endblock %}
+
+{% block content %}
+    {% get_all_article as article_all_list %}
+    <article class="post">
+        <section>
+            <div class="am-g am-g-fixed blog-fixed blog-content">
+                <div class="am-u-sm-12">
+                    <h1 class="blog-text-center">-- 存档 --</h1>
+                    {% regroup article_all_list by create_time.year as year_article_group %}
+                    {% for year in year_article_group %}
+                        <div class="timeline-year">
+                            <h1>{{ year.grouper }}</h1>
+                            {% regroup year.list by create_time.month as month_article_group %}
+                            <hr>
+                            {% for month in month_article_group %}
+                                <ul>
+                                    <h3>{{ month.grouper }}月</h3>
+                                    <hr>
+                                    {% for article in month.list %}
+                                        <li>
+                                            <span class="am-u-sm-4 am-u-md-2 timeline-span">{{ article.create_time |date:"Y/m/d" }}</span>
+                                            <span class="am-u-sm-12 am-u-md-4"><a
+                                                    href="{% url 'article_detail' article.pk %}">{{ article.title }}</a></span>
+                                            <span class="am-u-sm-4 am-u-md-2 ">{{ article.author }}</span>
+                                            <span class="am-u-sm-4 am-u-md-2 "><a
+                                                    href="{% url 'article_type_list' article.article_type.pk %}">{{ article.article_type.type_name }}</a></span>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endfor %}
+                        </div>
+                        <hr>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </section>
+    </article>
+{% endblock %}
+
+

@@ -1,0 +1,55 @@
+{% extends './base.html' %}
+{% load staticfiles %}
+{% load tags %}
+
+{% block title %}
+    section
+{% endblock %}
+
+{% block nav %}
+    <ul class="links">
+        {% get_record_read_now request.user as record_read_now %}
+        <ul class="links">
+            <li><a href={% url 'novels' %}>Novel List</a></li>
+            {% if record_read_now %}
+                <li><a href="{% url 'sections' record_read_now.novel.id %}">Novel Home</a></li>
+                <li class="active"><a>Reading</a></li>
+            {% else %}
+                <li><a>Novel Home</a></li>
+                <li class="active"><a>Reading</a></li>
+            {% endif %}
+            <li><a href="{% url 'update' %}">Novel Update</a></li>
+        </ul>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <section class="post">
+        <header class="major">
+{#            <span class="date">{{ section.add_time }}</span>#}
+            <h1>{{ section.title }}</h1>
+            {#            <p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br>#}
+            {#                facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br>#}
+            {#                amet nullam sed etiam veroeros.</p>#}
+        </header>
+        {#        <div class="image main"><img src="images/pic01.jpg" alt=""></div>#}
+        {{ section.content|safe }}
+    </section>
+    <footer>
+        <div class="pagination">
+            <a href="{% url 'sections' section.novel.id %}">目录</a>
+            {% if previous_section %}
+                <a href="{% url 'detail' previous_section.id %}"
+                   class="previous">{{ previous_section.title }}</a>
+            {% else %}
+                <a href="#" class="previous">这已经是第一章了</a>
+            {% endif %}
+            {% if next_section %}
+                <a href="{% url 'detail' next_section.id %}"
+                   class="next">{{ next_section.title }}</a>
+            {% else %}
+                <a href="#" class="next">请等待小说更新</a>
+            {% endif %}
+        </div>
+    </footer>
+{% endblock %}

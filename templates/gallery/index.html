@@ -1,0 +1,31 @@
+{% extends './base.html' %}
+{% load staticfiles %}
+{% load thumbnail %}
+
+
+{% block title %}
+    Images
+{% endblock %}
+
+{% block content %}
+    <div id="fh5co-main">
+        <div class="container">
+            <div class="row">
+                <div id="fh5co-board" data-columns>
+                    {% for img in images_list %}
+                        <div class="item">
+                            <div class="animate-box">
+                                <a href="/media/{{ img.image }}" class="image-popup fh5co-board-img"
+                                   title="{{ img.name }}"><img
+                                        src="{{ img.image.gallery.url }}" alt="{{ img.name }}"></a>
+                            </div>
+                            <div class="fh5co-desc">
+                                {{ img.describe }}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
