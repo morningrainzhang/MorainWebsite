@@ -59,7 +59,7 @@ openpyxl==2.5.0
 Pillow==5.0.0
 pycrypto==2.6.1
 Pygments==2.2.0
-PyJWT==1.6.0
+PyJWT==2.4.0
 PyMySQL==0.8.0
 python-social-auth==0.3.6
 python3-openid==3.1.0
